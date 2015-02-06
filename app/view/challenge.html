@@ -2,11 +2,20 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Challenge: <%= name %></title>
+	<title>Challenge: <%= challenge.name %></title>
 </head>
 <body>
-	
-	this is a challenge
+	<form action="" method="post">
+		<%= challenge.name %> Coding Challenge!
+		<div id="desc">
+			<%= challenge.desc %>
+		</div>
+		<div id="code">
+			<textarea name="editor" id="" cols="30" rows="10"><%= challenge.code %></textarea>
+		</div>
+		<input type="submit">
+	</form>
+		
 	
 
 </body>

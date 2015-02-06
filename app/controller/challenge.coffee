@@ -11,10 +11,17 @@ specs = {}
 files.forEach (file) ->
 	obj = require '../challenge/'+file
 	base = file.substr 0, file.indexOf '.'
-	if file.indexOf 'spec' >-1
+	if file.indexOf('spec') >-1
 		specs[base] = obj
 	else
 		challenges[base] = obj
 
 module.exports = (req, res, next) ->
-	res.send view(req.params)
+	name = req.params.name
+	challenge = challenges[name]
+
+	# console.log challenges, name
+	res.send view {
+		name: name
+		challenge: challenge
+	}
