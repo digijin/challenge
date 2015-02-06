@@ -2,7 +2,7 @@
   "name": "coding-challenge",
   "version": "0.0.0",
   "description": "online js code challenge",
-  "main": "index.js",
+  "main": "app/server.coffee",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/digijin/challenge/issues"
   },
-  "homepage": "https://github.com/digijin/challenge"
+  "homepage": "https://github.com/digijin/challenge",
+  "dependencies": {
+    "express": "^4.11.2",
+    "coffee-script": "^1.9.0",
+    "lodash": "^3.1.0"
+  }
 }
