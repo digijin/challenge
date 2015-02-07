@@ -21,6 +21,7 @@
     "coffee-script": "^1.9.0",
     "lodash": "^3.1.0",
     "gulp": "^3.8.10",
-    "gulp-nodemon": "^1.0.5"
+    "gulp-nodemon": "^1.0.5",
+    "body-parser": "^1.11.0"
   }
 }
