@@ -9,11 +9,12 @@ files = fs.readdirSync path.resolve './app/challenge'
 challenges = {}
 specs = {}
 files.forEach (file) ->
-	obj = require '../challenge/'+file
+	
 	base = file.substr 0, file.indexOf '.'
 	if file.indexOf('spec') >-1
-		specs[base] = obj
+		# specs[base] = obj
 	else
+		obj = require '../challenge/'+file
 		challenges[base] = obj
 
 module.exports = (req, res, next) ->

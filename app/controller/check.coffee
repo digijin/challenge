@@ -21,10 +21,14 @@ Sandbox = require 'sandbox'
 # proc = childProcess.exec('node')
 # proc.send '123', (data) ->
 # 	console.log data
+
+test = require '../tester'
+
 code = 'function Add(a, b) {\r\nreturn a+b;\r\n}'
-box = new Sandbox();
-box.run code + ' Add(1,2)==3', (out) ->
-	console.log out
+# specs = ' Add(1,2)==3'
+# specs = 'expect(Add(1,2)).toBe(3)'
+test(code, 'basic')
+
 # box.run 'a', console.log 
 
 
