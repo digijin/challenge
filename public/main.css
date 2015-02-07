@@ -1,0 +1,11 @@
+.result.pass{
+	background-color: green;
+}
+.result.fail{
+	background-color: red;
+}
+.result{
+	padding: 4px;
+	color: white;
+	border: 1px solid black;
+}
