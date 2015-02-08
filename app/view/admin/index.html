@@ -15,16 +15,7 @@
 <!-- result.rows and result.fields -->
 	<% result.rows.forEach(function(row){
 	%>
-		<div class="row">
-	<%		
-		for(var k in row){
-			v = row[k]
-	%>
-		<div class="cell"><%= k %> = <%= v %></div>
-	<%			
-		}
-	%>
-		</div>
+		<div class="table"><a href="<%= row.tablename %>"><%= row.tablename %></a></div>
 	<%		
 	})%>
 

@@ -13,5 +13,5 @@ module.exports = (req, res) ->
 	db.tables().then (result) ->
 		res.send view {
 			message: 'admin only!!!' + Math.random()
-			result: result
+			tables: result
 		}

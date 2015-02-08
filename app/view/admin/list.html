@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>list</title>
+</head>
+<body>
+	list view!
+	<table>
+		<tr>
+			<% data.fields.forEach(function(field){
+				%>
+					
+				<td><%= (field.name) %></td>
+				<%
+
+			})%>
+		</tr>
+		<%
+		data.rows.forEach(function(row){
+			%><tr><%
+			for(var k in row){
+				val = row[k]
+			%>
+				<td><%= val %></td>
+			<%
+			}
+			%></tr><%
+			})
+		%>
+
+	</table>
+	<%
+	console.log(data)
+	%>
+
+</body>
+</html>

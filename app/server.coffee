@@ -11,6 +11,7 @@ app.get '/challenge/:name', require './controller/challenge.coffee'
 app.post '/challenge/:name', require './controller/check.coffee'
 
 app.get '/admin', require './controller/admin.coffee'
+app.get '/admin/:tablename', require './controller/admin/list.coffee'
 
 app.use(express.static('./public'));
 
