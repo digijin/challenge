@@ -36,5 +36,5 @@ module.exports = {
 		defer.promise
 
 	tables: ->
-		@query "SELECT * FROM pg_catalog.pg_tables"# WHERE pg_catalog.pg_tables.schemaname = 'public'
+		@query "SELECT * FROM pg_catalog.pg_tables WHERE pg_catalog.pg_tables.schemaname = 'public'"
 }
