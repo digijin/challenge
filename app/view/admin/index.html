@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Admin interface</title>
+	<style>
+		.row{
+			border: 1px solid black;
+		}
+	</style>
+</head>
+<body>
+	
+	<%= message %>
+<!-- result.rows and result.fields -->
+	<% result.rows.forEach(function(row){
+	%>
+		<div class="row">
+	<%		
+		for(var k in row){
+			v = row[k]
+	%>
+		<div class="cell"><%= k %> = <%= v %></div>
+	<%			
+		}
+	%>
+		</div>
+	<%		
+	})%>
+
+</body>
+</html>
