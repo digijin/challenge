@@ -14,3 +14,5 @@ app.use(express.static('./public'));
 
 
 server = app.listen process.env.PORT or 4040
+
+console.log process.env.DATABASE_URL
