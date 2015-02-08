@@ -10,9 +10,9 @@ app.get '/', require './controller/index.coffee'
 app.get '/challenge/:name', require './controller/challenge.coffee'
 app.post '/challenge/:name', require './controller/check.coffee'
 
+app.get '/admin', require './controller/admin.coffee'
+
 app.use(express.static('./public'));
 
 
 server = app.listen process.env.PORT or 4040
-
-console.log process.env.DATABASE_URL
