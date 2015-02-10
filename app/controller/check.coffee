@@ -3,6 +3,7 @@ _ = require 'lodash'
 path = require 'path'
 Sandbox = require 'sandbox'
 test = require '../tester'
+db = require '../db.coffee'
 # childProcess = require 'child_process'
 
 # ls = childProcess.exec('ls -l', (error, stdout, stderr) ->
@@ -49,3 +50,6 @@ module.exports = (req, res, next) ->
 				results: results
 				message: 'challenge accepted!'
 			}
+
+	db.query "insert into submissions (data) values ('#{post.code}')"
+		.then console.log 

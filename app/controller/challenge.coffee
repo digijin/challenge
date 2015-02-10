@@ -1,6 +1,7 @@
 fs = require 'fs'
 _ = require 'lodash'
 path = require 'path'
+db = require '../db.coffee'
 
 view = _.template fs.readFileSync path.resolve './app/view/challenge.html'
 

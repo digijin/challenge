@@ -6,5 +6,12 @@
 </head>
 <body>
 	Here is the index page!
+	<%
+	challenges.forEach(function(challenge){
+		%>
+		<a href="/challenge/<%= challenge %>"><%= challenge %></a>
+		<%
+	})
+	%>
 </body>
 </html>
