@@ -13,7 +13,7 @@ class Model
 		values = []
 		for key of data
 			fields.push escape.ident key
-			values.push escape.literal data[key]
+			values.push escape.literal data[key].toString()
 		sql = 'insert into '+@tableName+' ('+fields.join(',')+') values ('+values.join(',')+') returning id'
 		db.query sql
 				.then (out) ->

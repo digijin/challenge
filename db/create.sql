@@ -30,10 +30,10 @@ CREATE TABLE candidates
 CREATE TABLE results
 (
     id serial primary key,
-    candidate_id integer,
-        pass text,
-        value text,
-        expected text,
-        description text
+    submission_id integer,
+    pass text,
+    value text,
+    expected text,
+    description text
 
 );
