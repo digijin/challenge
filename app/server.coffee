@@ -1,8 +1,12 @@
 express = require 'express'
 parser = require 'body-parser'
+session = require 'express-session'
 
 app = express()
-
+app.use session
+	secret: 'yolo'
+	resave: true
+	saveUninitialized: true
 app.use parser.urlencoded {extended:true}
 # app.use express.urlencoded()
 

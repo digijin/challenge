@@ -32,7 +32,7 @@ module.exports = (code, challenge) ->
 	# console.log script
 	box.run script, (out) ->
 		# console.log out
-		console.log results
+		# console.log results
 		def.resolve results
 
 	def.promise

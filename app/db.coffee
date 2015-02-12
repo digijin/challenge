@@ -10,19 +10,8 @@ console.log 'db initing'
 condefer = q.defer()
 connect = condefer.promise
 pg.connect url, (err, client, done) ->
-	# console.log 'error', err
-	# client.query "SELECT * FROM pg_catalog.pg_tables WHERE pg_catalog.pg_tables.schemaname = 'public'", console.log
-	# client.query '\dt', console.log
-	# module.exports = client
 	condefer.resolve client
-	done()
-
-# connect.then (conn)->
-# 	console.log 'resolved'
-# # 	console.log "then", conn
-# 	conn.query "SELECT * FROM users". console.log 
-
-
+	# done() # closes connection?
 
 
 module.exports = {

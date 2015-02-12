@@ -10,16 +10,18 @@ view = _.template fs.readFileSync path.resolve './app/view/result.html'
 
 module.exports = (req, res, next) ->
 	name = req.params.name
+	# console.log req.session
+	# unless req.session.candidate 
 
 	post = req.body
-	console.log post
 	test(post.code, name)
 		.then (results) ->
 			res.send view {
-				post:post
+				post: post
 				results: results
 				message: 'challenge accepted!'
 			}
 
-	db.query escape "insert into submissions (data) values (%L)", post.code
-		.then console.log 
+			db.query escape "insert into submissions (data, challenge) values (%L, %L) returning id", post.code, name
+				.then (out) ->
+					console.log 'id', out.rows[0].id
