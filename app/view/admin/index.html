@@ -13,11 +13,9 @@
 	
 	<%= message %>
 <!-- result.rows and result.fields -->
-	<% result.rows.forEach(function(row){
-	%>
-		<div class="table"><a href="<%= row.tablename %>"><%= row.tablename %></a></div>
-	<%		
-	})%>
+	<% tables.rows.forEach(function(row){ %>
+		<div class="table"><a href="/admin/<%= row.tablename %>"><%= row.tablename %></a></div>
+	<% }) %>
 
 </body>
 </html>

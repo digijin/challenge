@@ -35,6 +35,10 @@ db = require '../db.coffee'
 
 view = _.template fs.readFileSync path.resolve './app/view/result.html'
 
+# db.query "insert into submissions (data) values ('test')"
+# 		.then console.log 
+
+
 module.exports = (req, res, next) ->
 	# res.send 'challenge accepted! but not fulfilled. :('
 	name = req.params.name
