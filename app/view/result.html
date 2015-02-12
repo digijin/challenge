@@ -13,7 +13,7 @@
 	<div id="results">
 		<% results.forEach(function(result){ %>
 		<div class="result <% if(result.pass){%>pass<%}else{%>fail<%} %>">
-			<div class="desc"><%= result.desc %></div>
+			<div class="desc"><%= result.description %></div>
 			<div class="expected">expected:<%= result.expected %></div>
 			<div class="value">got:<%= result.value %></div>
 			<div class="pass">passed:<%= result.pass %></div>

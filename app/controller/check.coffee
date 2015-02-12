@@ -6,6 +6,8 @@ test = require '../tester'
 db = require '../db.coffee'
 escape = require 'pg-escape'
 
+submissions = require '../model/submissions'
+
 view = _.template fs.readFileSync path.resolve './app/view/result.html'
 
 module.exports = (req, res, next) ->
@@ -22,6 +24,10 @@ module.exports = (req, res, next) ->
 				message: 'challenge accepted!'
 			}
 
-			db.query escape "insert into submissions (data, challenge) values (%L, %L) returning id", post.code, name
-				.then (out) ->
-					console.log 'id', out.rows[0].id
+			console.log submissions
+
+			submissions.insert
+				data: post.code
+				challenge: name
+			.then (id) ->
+				console.log "challenge id", id

@@ -1,6 +1,7 @@
 drop table submissions;
 drop table users;
 drop table candidates;
+drop table results;
 
 CREATE TABLE submissions
 (
@@ -24,4 +25,15 @@ CREATE TABLE candidates
     name text not null,
     email text not null,
     created timestamp not null
+);
+
+CREATE TABLE results
+(
+    id serial primary key,
+    candidate_id integer,
+        pass text,
+        value text,
+        expected text,
+        description text
+
 );

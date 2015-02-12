@@ -16,6 +16,6 @@ expect = (val) ->
 				pass: val == expected
 				value: val
 				expected: expected
-				desc: itdesc
+				description: itdesc
 			}
 	}

@@ -18,7 +18,7 @@ class Model
 		db.query sql
 				.then (out) ->
 					defer.resolve out.rows[0].id
-		q.promise
+		defer.promise
 
 
 module.exports = Model

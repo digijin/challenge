@@ -27,12 +27,8 @@ module.exports = (code, challenge) ->
 	box = new Sandbox();
 	box.on 'message', (out) ->
 		results.push out
-		# console.log out
 	script = code + ';' + pre + specs[challenge]
-	# console.log script
 	box.run script, (out) ->
-		# console.log out
-		# console.log results
 		def.resolve results
 
 	def.promise
